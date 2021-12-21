@@ -1,0 +1,59 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Simple Page Layout example</title>
+        <style>
+            :root {
+                --header-height: 50px;
+                --footer-height: 100px;
+            }
+
+            * {
+                padding: 0;
+                margin: 0;
+                box-sizing: border-box;
+            }
+
+            header {
+                height: var(--header-height);
+                width: 100%;
+                background-color: #ec0000;
+                color: #ffffff;
+            }
+
+            footer {
+                height: var(--footer-height);
+                width: 100%;
+                background-color: #121212;
+                color: #ffffff;
+            }
+
+            main {
+                min-height: calc(
+                    100vh - (var(--header-height) + var(--footer-height))
+                );
+                width: 100%;
+                background-color: #efefef;
+                padding: 10px 10px 20px;
+                font-size: 20px;
+            }
+
+            p {
+                margin-bottom: 15px;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Simple Page Layout with Sticky Footer</h1>
+        </header>
+        <main>
+            <p>Put your main content here</p>
+        </main>
+        <footer>
+            <h2>Footer</h2>
+        </footer>
+    </body>
+</html>
